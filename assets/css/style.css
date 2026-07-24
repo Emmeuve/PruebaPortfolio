@@ -1,0 +1,189 @@
+/* ==========================================
+   1. ESTILOS GENERALES
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: #f4f4f4;
+    color: #333333;
+    padding: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Contenedor general para bloques con fondo gris */
+.fondo {
+    background-color: #e6e6e6;
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.fondo-oscuro {
+    background-color: #3b3b3b !important;
+    color: #ffffff !important;
+}
+
+
+/* ==========================================
+   2. HEADER Y FOOTER
+   ========================================== */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.site-header__logo img {
+    height: 40px;
+    width: auto;
+}
+
+.site-header__list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.site-header__link {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+
+/* ==========================================
+   3. GRILLA PRINCIPAL DE 3 COLUMNAS (ESCRITORIO)
+   ========================================== */
+@media (min-width: 992px) {
+    .home-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* 3 columnas iguales */
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    /* Columna 1 (Izquierda) */
+    .col-izquierda {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Columna 2 (Centro - Foto y Contacto) */
+    .col-centro {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .hero__image-wrapper {
+        background-color: #e6e6e6;
+        border-radius: 12px;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .hero__image-wrapper img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    /* Columna 3 (Derecha - Aside) */
+    .col-derecha {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+/* Tipografías internas de tarjetas */
+.hero__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero__title span {
+    color: #666666;
+}
+
+.perfil-card h2,
+.contacto-card-home h2,
+.proyectos-aside h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.perfil-card p {
+    line-height: 1.6;
+    color: #555555;
+}
+
+.contacto-card-home p {
+    color: #cccccc;
+    margin-bottom: 0.5rem;
+}
+
+.contacto-card-home span {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.redes-aside {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.25rem;
+}
+
+.redes-aside a {
+    color: #333333;
+    font-size: 1.25rem;
+    transition: transform 0.2s;
+}
+
+.redes-aside a:hover {
+    transform: scale(1.1);
+}
+
+/* ==========================================
+   GRILLA DE PROYECTOS (ASIMÉTRICA)
+   ========================================== */
+@media (min-width: 992px) {
+    .proyectos-layout {
+        display: grid;
+        grid-template-columns: 280px 1fr; /* Sidebar fija a la izq y contenido a la der */
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    .proyectos-grid-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* Columna izquierda más ancha para el destacado y derecha para los secundarios */
+        gap: 1.5rem;
+    }
+
+    .proyecto-principal {
+        grid-column: 1 / -1; /* Ocupa todo el ancho superior */
+    }
+}

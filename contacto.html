@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Portafolio Michel Valenzuela</title>
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/Logo_EmmeUve2.png">
+</head>
+
+<body class="pagina-secundaria">
+    <!-- Header -->
+    <header class="site-header fondo">
+        <div class="site-header__logo">
+            <img src="assets/img/IconLogo.png" alt="logo">
+        </div>
+        <nav class="site-header__menu">
+            <ul class="site-header__list">
+                <li><a href="index.html#sobremi" class="site-header__link">Sobre mí</a></li>
+                <li><a href="proyectos.html" class="site-header__link">Proyectos</a></li>
+                <li><a href="contacto.html" class="site-header__link activo">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="site-main contenido-interno">
+        <div class="row g-3">
+            <!-- Formulario -->
+            <div class="col-lg-7">
+                <div class="fondo contacto-card h-100">
+                    <h1 class="contacto-card__titulo">Conversemos</h1>
+                    <p class="contacto-card__subtitulo">¿Tienes un proyecto en mente? Cuéntame los detalles y te responderé a la brevedad.</p>
+
+                    <form novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="nombre" class="contacto-card__label">Nombre</label>
+                                <input type="text" class="form-control contacto-card__input" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                                <div class="invalid-feedback">Ingresa tu nombre.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="contacto-card__label">Correo electrónico</label>
+                                <input type="email" class="form-control contacto-card__input" id="email" name="email" placeholder="tu@correo.com" required>
+                                <div class="invalid-feedback">Ingresa un correo válido.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="asunto" class="contacto-card__label">Asunto</label>
+                                <select class="form-select contacto-card__input" id="asunto" name="asunto" required>
+                                    <option value="" selected disabled>Selecciona un tema</option>
+                                    <option value="proyecto-web">Proyecto web</option>
+                                    <option value="diseno-grafico">Diseño gráfico</option>
+                                    <option value="ux-ui">UX/UI</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                                <div class="invalid-feedback">Selecciona un asunto.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="mensaje" class="contacto-card__label">Mensaje</label>
+                                <textarea class="form-control contacto-card__input" id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                                <div class="invalid-feedback">Escribe tu mensaje.</div>
+                            </div>
+                            <div class="col-12 pt-2">
+                                <button type="submit" class="btn contacto-card__btn">Enviar mensaje</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Información de contacto -->
+            <div class="col-lg-5">
+    <div class="fondo fondo-oscuro contacto-info h-100">
+        <div class="contacto-info__item">
+            <h3 class="contacto-info__titulo">Redes</h3>
+            <div class="contacto-info__redes d-flex flex-wrap gap-2">
+                <a href="https://github.com/emmeuve" target="_blank" aria-label="perfil github" class="btn btn-sm btn-light d-flex align-items-center gap-2">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.instagram.com/emmeuve.dsg" target="_blank" aria-label="perfil instagram" class="btn btn-sm btn-light d-flex align-items-center gap-2">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://www.linkedin.com/in/michelvalenzuelacastillo/" target="_blank" aria-label="perfil linkedin" class="btn btn-sm btn-light d-flex align-items-center gap-2">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://www.behance.net/Emmeuve" target="_blank" aria-label="perfil behance" class="btn btn-sm btn-light d-flex align-items-center gap-2">
+                    <i class="fa-brands fa-behance"></i>
+                    <span>Behance</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer fondo">
+        <p>©2026 Michel - Diseñador gráfico / UX-UI | Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!-- Validación Bootstrap -->
+    <script>
+        (function () {
+            'use strict'
+            const forms = document.querySelectorAll('form')
+            Array.from(forms).forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+</body>
+
+</html>
